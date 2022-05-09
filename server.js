@@ -13,6 +13,15 @@ const app = express();
 const server = http.createServer(app);
 const io = socketio(server);
 
+const corsOpt = {
+  origin: '*',
+  credentials: true,
+  methods: ['GET','POST','DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+  exposedHeaders: ['Content-Type', 'Authorization']
+};
+app.use(cors(corsOpt));
+
 io.on("connection", (socket) => {
 
   socket.on("join", ({ name, room }, cb) => {
