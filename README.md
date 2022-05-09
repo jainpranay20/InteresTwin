@@ -1,8 +1,8 @@
-## React Web Chat App
+## InteresTwin
 
 InteresTwin is a web application that allows users to reconnect with other people. It is a fully fledged world chat system separated by hobbies to facilitate better communication between users. We used a Node.js express and React framework to create this app. The home page displays a basic user login using BCrypt and JWT technology. We used Socket.Io, a JavaScript library for realtime web applications to create this group chat system. We used Materialize for UI, Redux for state management and MongoDB for database management.
 
-## Instruction
+## Instructions
 
 1. Register user account
 2. Login with user acccount
