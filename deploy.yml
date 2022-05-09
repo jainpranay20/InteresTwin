@@ -13,20 +13,20 @@
         state: started
 
     # - name: pull docker front-end image
-    #   shell: docker pull sagarshirke2674/spe:cc1
+    #   shell: docker pull sagarshirke2674/spe:client
 
     # - name: pull docker server image
-    #   shell: docker pull sagarshirke2674/spe:ss1
+    #   shell: docker pull sagarshirke2674/spe:server
 
     - name: docker compose pull
       command: docker-compose pull
 
 
     - name: stop previous back-end container
-      shell: docker rm -f sagarshirke2674/spe:ss1
+      shell: docker rm -f sagarshirke2674/spe:server
 
     - name: stop previous front-end container
-      shell: docker rm -f sagarshirke2674/spe:cc1
+      shell: docker rm -f sagarshirke2674/spe:client
 
 
     - name: running docker compose file
