@@ -6,6 +6,9 @@ const users = require("./routes/api/users");
 const socketio = require("socket.io");
 const http = require("http");
 const cors = require("cors");
+const morgan = require('morgan')
+const fs = require('fs')
+const path = require('path')
 
 const { addUser, removeUser, getUser, getUsersInRoom } = require("./users.js");
 
@@ -50,12 +53,15 @@ io.on("connection", (socket) => {
   })
 })
 
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' })
+
 // Bodyparser middleware
 app.use(
   bodyParser.urlencoded({
     extended: false
   })
 );
+app.use(morgan(':date :method :url :status :res[content-length] - :response-time ms',{stream:accessLogStream}));
 app.use(bodyParser.json());
 // DB Config
 const db = require("./config/keys").mongoURI;
@@ -83,3 +89,5 @@ app.use(cors());
 
 const port = process.env.PORT || 5000; // process.env.port is Heroku's port if you choose to deploy the app there
 server.listen(port, () => console.log(`Server up and running on port ${port} !`));
+
+module.exports = app

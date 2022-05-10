@@ -1,0 +1,14 @@
+Tue, 10 May 2022 09:44:26 GMT POST /api/users/login 200 229 - 127.998 ms
+Tue, 10 May 2022 09:52:30 GMT POST /api/users/register 400 168 - 1.268 ms
+Tue, 10 May 2022 09:52:35 GMT POST /api/users/login 400 75 - 0.710 ms
+Tue, 10 May 2022 09:54:13 GMT POST /api/users/login 200 229 - 110.521 ms
+Tue, 10 May 2022 10:05:20 GMT POST /api/users/register 200 189 - 157.116 ms
+Tue, 10 May 2022 10:05:32 GMT POST /api/users/login 200 225 - 111.388 ms
+Tue, 10 May 2022 13:21:19 GMT POST /api/users/register 400 36 - 9.349 ms
+Tue, 10 May 2022 13:21:20 GMT POST /api/users/login 200 229 - 708.696 ms
+Tue, 10 May 2022 13:33:40 GMT POST /api/users/register 400 36 - 8.430 ms
+Tue, 10 May 2022 13:33:41 GMT POST /api/users/login 200 229 - 550.440 ms
+Tue, 10 May 2022 13:36:07 GMT POST /api/users/register 400 36 - 7.975 ms
+Tue, 10 May 2022 13:36:07 GMT POST /api/users/login 200 229 - 656.460 ms
+Tue, 10 May 2022 13:37:30 GMT POST /api/users/register 400 36 - 9.414 ms
+Tue, 10 May 2022 13:37:31 GMT POST /api/users/login 200 229 - 659.072 ms
