@@ -61,7 +61,7 @@ app.use(
     extended: false
   })
 );
-app.use(morgan(':date :method :url :status :res[content-length] - :response-time ms',{stream:accessLogStream}));
+app.use(morgan(':date[iso] :method :url :status :res[content-length] - :response-time ms',{stream:accessLogStream}));
 app.use(bodyParser.json());
 // DB Config
 const db = require("./config/keys").mongoURI;
